@@ -189,8 +189,8 @@ body {
 }
 
 .hero-image img {
-    width: 100%;
-    height: 80%;
+    width: auto;
+    height: auto;
     object-fit: contain;
 }
 
@@ -372,5 +372,6 @@ footer {
         font-size: 2rem;
     }
 }
+
 
 
