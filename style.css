@@ -189,9 +189,9 @@ body {
 }
 
 .hero-image img {
-    width: auto;
+    width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /* Grids */
@@ -372,6 +372,7 @@ footer {
         font-size: 2rem;
     }
 }
+
 
 
 
