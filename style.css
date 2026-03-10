@@ -10,6 +10,7 @@
     --font-main: 'Inter', sans-serif;
 }
 
+/* صلحت الخطأ هنا */
 * {
     margin: 0;
     padding: 0;
@@ -190,8 +191,8 @@ body {
 
 .hero-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Grids */
@@ -330,6 +331,44 @@ body {
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+}
+
+/* Message Box Styles */
+.message-box {
+    display: none;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    border: 1px solid rgba(34, 197, 94, 0.5);
+    background: rgba(34, 197, 94, 0.15);
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+    animation: fadeIn 0.5s ease;
+    backdrop-filter: blur(5px);
+}
+
+.message-box.success {
+    display: block;
+    color: #4ade80;
+}
+
+.message-box.error {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.5);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
 
 /* Footer */
