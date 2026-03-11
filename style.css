@@ -411,3 +411,30 @@ footer {
         font-size: 2rem;
     }
 }
+
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow);
+    border-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.repo-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.project-card:hover .repo-link {
+    color: var(--secondary-color);
+}
