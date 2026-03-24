@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 8%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 18% 12%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 18% 12%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 210 100% 55%;
+    --primary-foreground: 220 20% 8%;
+
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 220 15% 16%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 210 100% 55%;
+    --accent-foreground: 220 20% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 210 100% 55%;
+
+    --radius: 0.75rem;
+
+    --glow: 210 100% 55%;
+    --glass: 220 18% 14%;
+    --glass-border: 220 15% 22%;
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 210 100% 55%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 220 15% 16%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 210 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-glass-border rounded-xl;
+  }
+
+  .glow-border {
+    box-shadow: 0 0 20px -5px hsl(var(--glow) / 0.3),
+                inset 0 0 20px -5px hsl(var(--glow) / 0.05);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-cyan-400;
+  }
+}
+
+@layer utilities {
+  .animate-typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid hsl(var(--primary));
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: hsl(var(--primary)) }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
