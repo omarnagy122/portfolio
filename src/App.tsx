@@ -13,11 +13,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      {/* ضيف الـ basename هنا بالظبط */}
+      {/* تأكد إن basename مكتوب بحروف صغيرة 'portfolio' زي اسم الـ Repo بالظبط */}
       <BrowserRouter basename="/portfolio/">
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* أي صفحات إضافية بتتحط هنا قبل سطر الـ NotFound */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
